@@ -12,32 +12,32 @@ body{
     display: flex;
     gap: 20%;
 }
+#left h1 {
+    font-size: 1.7rem;
+}
+
+#left h3 {
+    font-size: 1.2rem;
+}
+
+#lrig {
+    margin-top: 2%;
+}
 
 .container {
     top: 0;
     max-width: 1600px;
     margin: 0 auto;
     padding: 0 20px;
+    display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 2%
 }
 
-#left h1 {
-    font-size: 2rem;
-}
-
-#left h3 {
-    font-size: 1.4rem;
-}
-
-#lrig {
-    margin-top: 2%;;
-}
-
 #logo {
-    height: 100px;
-    width: 100px;
+    height: 90px;
+    width: 90px;
     border-radius: 50%;
 } 
 
@@ -49,21 +49,14 @@ body{
 
 #right {
     flex: 1;
-    text-align: center;
+    text-align: right;
+    margin-top: 2%;
 }
 
-#line {
-    border-top: 3px solid rgb(57, 39, 39);
+.vl {
+    border-left: 3px solid rgb(242, 183, 183);
     height: auto;
-    margin-bottom: 5%;
-    margin-top: 10%;
-}
-
-.line {
-    border-top: 3px solid rgb(57, 39, 39);
-    height: auto;
-    margin-bottom: 5%;
-    box-shadow: 4px 4px 3px rgb(92, 89, 89);
+    margin-bottom: 1%;
 }
 
 #user {
@@ -82,8 +75,8 @@ header {
     color: #fff;
     padding: 20px 0;
     top: 0;
-    height: 729px;
-    width: max-content;
+    height: fit-content;
+    position: sticky;
 }
 
 header h1 {
@@ -96,23 +89,20 @@ nav ul {
 }
 
 nav ul li {
+    display: inline;
     margin-right: 20px;
 } 
 
  nav ul li a {
     color: #fff;
     text-decoration: none;
-    font-size: 1.2rem;
     position: relative;
     transition: color 0.3s ease-in-out;
 }
 
 nav ul li a:hover {
-    color: #ffffff;
-    font-style: italic;
+    color: #ee8b8b;
 }
-
-
 
 nav ul li a::before {
     content: '';
@@ -121,15 +111,20 @@ nav ul li a::before {
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: #f5e5e0; /* Initial color for underline */
-    visibility: hidden;
-    transform: scaleX(0); /* Start with no underline */
-    transition: all 0.3s ease-in-out; /* Smooth transition for underline */
+    background-color: #dd937d; 
+    /* visibility: hidden; */
+    transform: scaleX(0); 
+    transition: all 0.3s ease-in-out; 
 }
 
 nav ul li a:hover::before {
     visibility: visible;
-    transform: scaleX(1); /* Show full underline on hover */
+    transform: scaleX(1); 
+}
+
+#main-right {
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -137,7 +132,11 @@ nav ul li a:hover::before {
     background-color: rgb(240, 211, 211);
     border-radius: 8px;
     box-shadow: 7px 10px 10px;
-    margin: 50% 50% 50% 0%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
     width: max-content; 
     height: max-content;
     padding: 20px;
