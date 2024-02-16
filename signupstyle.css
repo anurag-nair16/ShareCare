@@ -78,7 +78,6 @@ header {
     padding: 20px 0;
     top: 0;
     height: fit-content;
-    position: sticky;
 }
 
 header h1 {
@@ -129,8 +128,6 @@ nav ul li a:hover::before {
     background-color: rgb(240, 211, 211);
     border-radius: 8px;
     box-shadow: 7px 10px 10px;
-    margin-top: 1%;
-    margin-left: 40%;
     width: max-content; 
     height: max-content;
     padding: 20px;
@@ -160,6 +157,25 @@ input[type="tel"]   {
     border: 1px solid black; 
     border-radius: 7px;
     box-sizing: border-box;
+}
+
+
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 600px) {
+    form {
+        height: 130vh;
+    }
+}
+
+@media (min-width: 601px) {
+    form {
+        height: 100vh;
+    }
 }
 
 
