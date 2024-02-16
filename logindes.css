@@ -181,14 +181,12 @@ form {
     align-items: center;
 }
 
-/* For phone screens */
 @media (max-width: 600px) {
     form {
         height: 110vh;
     }
 }
 
-/* For desktop screens */
 @media (min-width: 601px) {
     form {
         height: 70vh;
