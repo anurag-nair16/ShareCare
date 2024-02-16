@@ -58,7 +58,7 @@ body {
 .vl {
     border-left: 3px solid rgb(242, 183, 183);
     height: auto;
-    margin-bottom: 1%;
+    margin-bottom: 1%; 
 }
 
 #user {
@@ -168,13 +168,13 @@ form {
 
 @media (max-width: 600px) {
     form {
-        height: 130vh;
+        height: 150vh;
     }
 }
 
 @media (min-width: 601px) {
     form {
-        height: 100vh;
+        height: 130vh;
     }
 }
 

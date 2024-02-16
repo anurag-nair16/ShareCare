@@ -132,11 +132,6 @@ nav ul li a:hover::before {
     background-color: rgb(240, 211, 211);
     border-radius: 8px;
     box-shadow: 7px 10px 10px;
-    /* position: absolute;
-    top: 50%;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%); */
     width: max-content; 
     height: max-content;
     padding: 20px;
