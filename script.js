@@ -23,14 +23,33 @@ document.addEventListener('DOMContentLoaded', function() {
     const hamburger = document.querySelector('.hamburger');
     const navUL = document.querySelector('nav ul');
 
-    // When mouse enters the hamburger area, show the navigation links
+    // Function to toggle the menu visibility
+    function toggleMenu() {
+        navUL.classList.toggle('show');
+    }
+
+    // For desktop: show the navigation links on mouse enter
     hamburger.addEventListener('mouseenter', function() {
-        navUL.classList.add('show');
+        
+            toggleMenu();
+        
     });
 
-    // Hide the navigation links when mouse leaves the navigation area
-    navUL.addEventListener('mouseleave', function() {
-        navUL.classList.remove('show');
+    // For mobile: toggle the navigation links on click
+    hamburger.addEventListener('click', function(event) {
+        
+            event.preventDefault(); // Prevent default behavior of anchor
+            toggleMenu();
+        
     });
+
+    // For desktop: hide the navigation links when mouse leaves the navigation area
+    navUL.addEventListener('mouseleave', function() {
+      
+            toggleMenu();
+        
+    });
+
 });
+
 

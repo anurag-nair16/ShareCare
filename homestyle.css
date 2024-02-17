@@ -398,8 +398,8 @@ nav {
         background-color: #17151c;
         position: absolute;
         top: 0px;
-        right: 0;
-        width: 100vw;
+        height: max-content;
+        width: fit-content;
     }
 
     nav ul li {
