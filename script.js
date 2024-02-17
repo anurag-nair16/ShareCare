@@ -10,46 +10,24 @@ function validateForm() {
 }
 
 
-// document.addEventListener('DOMContentLoaded', function() {
-//     const hamburger = document.querySelector('.hamburger');
-//     const navUL = document.querySelector('nav ul');
-
-//     hamburger.addEventListener('click', function() {
-//         navUL.classList.toggle('show');
-//     });
-// });
-
 document.addEventListener('DOMContentLoaded', function() {
     const hamburger = document.querySelector('.hamburger');
     const navUL = document.querySelector('nav ul');
 
-    // Function to toggle the menu visibility
-    function toggleMenu() {
-        navUL.classList.toggle('show');
-    }
-
-    // For desktop: show the navigation links on mouse enter
-    hamburger.addEventListener('mouseenter', function() {
-        
-            toggleMenu();
-        
-    });
-
-    // For mobile: toggle the navigation links on click
+    // Toggle the menu when clicking the hamburger
     hamburger.addEventListener('click', function(event) {
-        
-            // event.preventDefault(); // Prevent default behavior of anchor
-            toggleMenu();
-        
+        event.stopPropagation(); // Prevent the event from bubbling up
+        navUL.classList.toggle('show');
     });
 
-    // For desktop: hide the navigation links when mouse leaves the navigation area
-    navUL.addEventListener('mouseleave', function() {
-      
-            toggleMenu();
-        
-    });
+    // Close the menu when clicking outside of it
+    document.body.addEventListener('click', function(event) {
+        const isClickInsideNav = navUL.contains(event.target);
+        const isClickInsideHamburger = hamburger.contains(event.target);
 
+        if (!isClickInsideNav && !isClickInsideHamburger) {
+            navUL.classList.remove('show');
+        }
+    });
 });
-
 
