@@ -405,6 +405,9 @@ nav {
     .show {
         margin-left: 10%;
     }
+    .vl {
+        display: none;
+    }
 }
 
 
