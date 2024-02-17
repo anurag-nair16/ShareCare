@@ -7,6 +7,7 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #f4e8e8;
+    overflow-x: hidden;
 } 
 
 #left h1 {
@@ -21,7 +22,7 @@ body {
     margin-top: 2%;
 }
 
-.container {
+.m_container {
     top: 0;
     max-width: 1600px;
     margin: 0 auto;
@@ -73,7 +74,7 @@ header {
     padding: 20px 0;
     top: 0;
     height: fit-content;
-    /* position: sticky; */
+    position: relative;
 }
 
 header h1 {
@@ -109,7 +110,6 @@ nav ul li a::before {
     bottom: 0;
     left: 0;
     background-color: #dd937d; 
-    /* visibility: hidden; */
     transform: scaleX(0); 
     transition: all 0.3s ease-in-out; 
 }
@@ -315,6 +315,97 @@ footer p {
 
 html {
     scroll-behavior: smooth;
+}
+
+.hamburger {
+    display: none; 
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: #fff;
+    padding: 10px;
+    margin-right: 20px;
+    
+}
+
+nav {
+    position: absolute;
+    top: 100%;
+    width: 100%;
+}
+
+
+.show {
+    display: flex !important;
+    flex-direction: column;
+    background-color: #17151c;
+    position: absolute;
+    top: 70px;
+    left: 0; /* Adjust from right to left */
+    width: 100%;
+    align-items: center; /* Center align items */
+}
+
+@media only screen and (min-width: 751px) {
+    
+    .hamburger {
+        display: none;
+    }
+
+    .show {
+        display: none;
+    }
+    
+    nav ul {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+     nav {
+        position:static;
+        margin-top: 20px;
+    } 
+}
+
+
+@media only screen and (max-width: 750px) {
+    
+    .hamburger {
+        display: inline-block;
+    }
+    
+    nav ul {
+        display: none; /* Initially hide the navigation links */
+        position: absolute;
+        top: 100%;
+        left: 50%; /* Move to the center */
+        transform: translateX(-50%); /* Center horizontally */
+        background-color: #17151c;
+        padding: 20px;
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul li {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+     .show {
+        display: flex !important; 
+        flex-direction: column;
+        background-color: #17151c;
+        position: absolute;
+        top: 0px;
+        right: 0;
+        width: 100vw;
+    }
+
+    nav ul li {
+        display: block;
+        text-align: center;
+    } 
 }
 
 
