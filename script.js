@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // For mobile: toggle the navigation links on click
     hamburger.addEventListener('click', function(event) {
         
-            event.preventDefault(); // Prevent default behavior of anchor
+            // event.preventDefault(); // Prevent default behavior of anchor
             toggleMenu();
         
     });
